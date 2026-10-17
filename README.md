@@ -28,7 +28,7 @@ The current release supports Linux and macOS with Python 3.10 or later.
 Install from GitHub with `pipx`:
 
 ```sh
-pipx install git+https://github.com/miningstore/agent-quiet-run.git
+pipx install git+https://github.com/miningstore/agent-quiet-run.git@v0.1.0
 ```
 
 You can also clone the repository and install it in a virtual environment:

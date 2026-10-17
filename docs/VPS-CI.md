@@ -32,7 +32,7 @@ Install `quiet-run` in a path that the service can use:
 ```sh
 python3 -m venv /opt/agent-quiet-run
 /opt/agent-quiet-run/bin/python -m pip install \
-  git+https://github.com/miningstore/agent-quiet-run.git
+  git+https://github.com/miningstore/agent-quiet-run.git@v0.1.0
 ```
 
 Copy `examples/systemd/run-project-ci.sh` to
