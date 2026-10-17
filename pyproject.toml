@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-quiet-run"
+version = "0.1.0"
+description = "Run noisy commands with bounded agent-visible output and private full logs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "MiningStore"}]
+keywords = ["agents", "cli", "logs", "vps", "ci"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: System :: Logging",
+]
+
+[project.scripts]
+quiet-run = "agent_quiet_run.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/miningstore/agent-quiet-run"
+Issues = "https://github.com/miningstore/agent-quiet-run/issues"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

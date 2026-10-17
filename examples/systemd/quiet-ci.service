@@ -1,0 +1,13 @@
+[Unit]
+Description=Run the project CI checks with bounded journal output
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/srv/example-project
+StateDirectory=agent-quiet-run
+StateDirectoryMode=0700
+ExecStart=/usr/local/libexec/agent-quiet-run/run-project-ci.sh
